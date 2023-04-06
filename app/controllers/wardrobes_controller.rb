@@ -20,6 +20,14 @@ class WardrobesController < ApplicationController
     render :show
   end
 
+  def update 
+    @wardrobe = Wardrobe.find_by(id: params[:id])
+    @wardrobe.update(
+      item: params[:name] || @wardrobe.item, 
+      description: params[:description] || @wardrobe.description, 
+      material: params[:material] || @wardrobe.material, 
+      price: params[:price] || @wardrobe.price 
+    )
+      render :show
+  end 
 end 
-
-

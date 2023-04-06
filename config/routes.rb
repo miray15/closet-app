@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   get "/wardrobes/:id" => "wardrobes#show"
 
 # update action
-patch "/wardrobe/:id" => "wardrobe#update"
+patch "/wardrobes/:id" => "wardrobes#update"
 
 end
